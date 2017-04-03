@@ -1,0 +1,19 @@
+---
+layout: page
+title: Contact
+permalink: /contact/
+---
+
+<div class="contact-list">
+    
+  <span class='badge contact-link'>
+      <span class='glyphicon glyphicon-envelope icon'></span>
+      <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+  </span>
+  {% for link in site.social_links %}
+  <span class='badge contact-link'>
+    <a href="{{link.url}}"><img class="icon" src="{{link.icon}}"> {{link.name}} </a><br>
+  </span>
+  {% endfor %}
+  
+</div>

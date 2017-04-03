@@ -1,0 +1,54 @@
+---
+
+
+---
+
+
+
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+    <header class="site-header">
+        <h1>{{ site.title }}</h1>
+        <nav>
+          {% for my_page in site.pages %}
+              {% if my_page.title %}
+                  <a class="page-link" href="#{{ my_page.title }}">{{ my_page.title }}</a>
+              {% endif %}
+          {% endfor %}
+        </nav>
+        
+    </header>
+    
+
+    
+
+
+    <div id="content" class="well container">
+      
+      {% for page in site.pages %}
+        {% if page.title %}
+          <article id="{{page.title}}">
+            <h3>{{page.title}}</h3>
+            {{page.content}}
+          </article>
+        {% endif %}
+      {% endfor %}
+      
+    </div>
+
+    <!-- <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p> -->
+
+  </body>
+
+</html>
+
+
+
+
+
+

@@ -1,1 +1,34 @@
-theme: jekyll-theme-time-machine
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+
+title: Blake Curry's Site
+email: blake.curry@gmx.us
+description: > # this means to ignore newlines until "baseurl:"
+  This is a Portfolio site for Blake Curry(a.k.a. Faxn).
+
+baseurl: "faxn.github.io" # the subpath of your site, e.g. /blog
+url: "https://faxn.github.io" # the base hostname & protocol for your site
+
+# Build settings
+markdown: kramdown
+
+
+permalink: /:categories/:title.html
+
+
+social_links:
+-
+    name: Github
+    icon: //github.com/favicon.ico # TODO Self-host social media icons insted of hotlinking
+    #icon: static/icon-github.svg
+    url: //www.github.com/faxn
+-
+    name: Linkedin
+    icon: https://www.linkedin.com/favicon.ico
+    url: https://www.linkedin.com/in/blake-curry-27163331
