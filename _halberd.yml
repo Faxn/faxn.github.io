@@ -2,4 +2,5 @@
 
 baseurl: "/faxn/_site" # the subpath of your site, e.g. /blog
 url: "http://halberd.zapto.org" # the base hostname & protocol for your site
+usecdn: false
 

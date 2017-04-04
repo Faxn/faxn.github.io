@@ -12,7 +12,7 @@ email: blake.curry@gmx.us
 description: > # this means to ignore newlines until "baseurl:"
   This is a Portfolio site for Blake Curry(a.k.a. Faxn).
 
-baseurl: "faxn.github.io" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://faxn.github.io" # the base hostname & protocol for your site
 
 # Build settings
@@ -32,3 +32,7 @@ social_links:
     name: Linkedin
     icon: https://www.linkedin.com/favicon.ico
     url: https://www.linkedin.com/in/blake-curry-27163331
+
+
+favicon: https://avatars3.githubusercontent.com/u/3074727?v=3
+usecdn: true

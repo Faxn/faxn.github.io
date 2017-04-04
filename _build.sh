@@ -1,1 +1,1 @@
-jekyll b --config _config.yml,_halberd.yml $*
+jekyll b --config _config.yml,_halberd.yml --watch  $* 

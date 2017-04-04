@@ -32,9 +32,11 @@
       
       {% for page in site.pages %}
         {% if page.title %}
-          <article id="{{page.title}}">
-            <h3>{{page.title}}</h3>
-            {{page.content}}
+          <article id="{{page.title}}" class="post">
+            <h2 class="post-header">{{page.title}}</h2>
+            <div class="post-content">
+              {{page.content}}
+            </div>
           </article>
         {% endif %}
       {% endfor %}

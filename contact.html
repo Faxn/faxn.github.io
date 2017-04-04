@@ -6,14 +6,14 @@ permalink: /contact/
 
 <div class="contact-list">
     
-  <span class='badge contact-link'>
+  <a class='btn btn-info contact-link' href="mailto:{{ site.email }}">
       <span class='glyphicon glyphicon-envelope icon'></span>
-      <a href="mailto:{{ site.email }}">{{ site.email }}</a>
-  </span>
+      {{ site.email }}
+  </a>
   {% for link in site.social_links %}
-  <span class='badge contact-link'>
-    <a href="{{link.url}}"><img class="icon" src="{{link.icon}}"> {{link.name}} </a><br>
-  </span>
+  <a class='btn btn-info contact-link' href="{{link.url}}">
+    <img class="icon" src="{{link.icon}}"> {{link.name}}
+  </a>
   {% endfor %}
   
 </div>
