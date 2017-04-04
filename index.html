@@ -12,34 +12,42 @@
 
   <body>
 
-    <header class="site-header">
+    <header class="site-header bg-primary navbar-fixed-top">
         <h1>{{ site.title }}</h1>
         <nav>
-          {% for my_page in site.pages %}
-              {% if my_page.title %}
-                  <a class="page-link" href="#{{ my_page.title }}">{{ my_page.title }}</a>
-              {% endif %}
-          {% endfor %}
+          <ul class="nav nav-pills">
+            {% for my_page in site.pages %}
+                {% if my_page.title %}
+                    <li><a class="page-link btn btn-link" href="#{{ my_page.title }}">{{ my_page.title }}</a></li>
+                {% endif %}
+            {% endfor %}
+          </ul>
         </nav>
         
     </header>
     
 
-    
-
-
-    <div id="content" class="well container">
+    <div class="site-content well container">
       
-      {% for page in site.pages %}
-        {% if page.title %}
-          <article id="{{page.title}}" class="post">
-            <h2 class="post-header">{{page.title}}</h2>
+      {% for my_page in site.pages %}
+        {% if my_page.title %}
+          <section id="{{my_page.title}}" class="post">
+            <a href="{{my_page.url | prepend: site.baseurl}}"><h2 class="post-header">{{my_page.title}}</h2></a>
             <div class="post-content">
-              {{page.content}}
+              {{my_page.content}}
             </div>
-          </article>
+          </section>
         {% endif %}
       {% endfor %}
+      
+      <section id="projects">
+        <h2>Projects</h2>
+        {% for my_project in site.projects %}
+          <a href={{my_project.url | prepend: site.baseurl}}><h3>{{my_project.title}}</h3>
+          <img src="{{my_project.image}}">
+          {{my_project.content}}
+        {% endfor %}
+      </section>
       
     </div>
 

@@ -1,7 +1,6 @@
 ---
 layout: page
-title: Experience
-permalink: /experience/
+title: Experience/Education
 ---
 
 
@@ -17,3 +16,10 @@ and improve performance.
 - Fixing Friends and family's computer problems since high school.
 - Maintain and support my own personal Linux server and a friend's Linode VPN.
 - Enjoy cooking and creating recipes of my own.
+
+### Undergrad at RIT
+
+- Rochester Institute of Technology Rochester, NY
+- 4 years in Computer Science
+- Degree Not Awarded, Not Expected.
+- Credits: 128 (SH)

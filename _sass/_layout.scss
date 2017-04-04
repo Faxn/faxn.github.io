@@ -1,32 +1,22 @@
-/**
- * Icons
- */
-.icon {
-    
-    width: 1.5em;
-    height: 1.5em;
-}
 
-.contact-link {
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-    padding-left: 0.7em;
-    padding-right: 1em;
-    margin-right: .3em;
-    margin-top: .3em;
-    &:hover{
-        transform: scale(1.1,1.1);
-    }
-}
-
-.contact-link a {
-    color: darken(#ffffff, 15%);
-    &:hover{
-        text-decoration: none;
-    }
-}
 
 .post-content {
   margin: 1em;
   margin-left: 2em;
 }
+
+.site-header{
+  display:flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.site-header * {
+  vertical-align: middle;
+  margin: 1px;
+}
+
+.site-content {
+  padding-top: 80px;
+}
+
