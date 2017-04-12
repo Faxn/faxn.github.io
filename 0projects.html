@@ -1,0 +1,15 @@
+---
+layout: page
+title: Projects
+portfolio_order: 15
+---
+
+{% for my_project in site.projects %}
+  <div class='row'>
+    <section class='col-xs-12 col-sm-6 col-md-4'>
+      <a href={{my_project.url | prepend: site.baseurl}}><h3>{{my_project.title}}</h3>
+      <img class="project-screenshot" src="{{my_project.image}}">
+      {{my_project.content}}
+    </section>
+  </div>
+{% endfor %}
