@@ -1,5 +1,5 @@
 ---
-url: https://faxn-fcc-file.herokuapp.com/
+live: https://faxn-fcc-file.herokuapp.com/
 source: https://github.com/Faxn/fcc-api-file
 for: https://www.freecodecamp.com/challenges/file-metadata-microservice
 image: assets/File.png

@@ -4,12 +4,20 @@ title: Projects
 portfolio_order: 15
 ---
 
+<div class="container-fluid row">
 {% for my_project in site.projects %}
-  <div class='row'>
-    <section class='col-xs-12 col-sm-6 col-md-4'>
-      <a href={{my_project.url | prepend: site.baseurl}}><h3>{{my_project.title}}</h3>
+  <div class='project-tile'>
+    <figure class='col-xs-12 col-sm-6 col-md-4'>
       <img class="project-screenshot" src="{{my_project.image}}">
-      {{my_project.content}}
-    </section>
+      <figcaption>
+          <h3>{{my_project.title}}</h3>
+          {{my_project.content}}
+          <span>
+            <a href={{my_project.live}}>page</a>
+            <a href={{my_project.source}}>source</a>
+          </span>
+      </figcaption>
+    </figure>
   </div>
 {% endfor %}
+</div>

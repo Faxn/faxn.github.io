@@ -5,4 +5,4 @@ image: assets/Quotes.png
 show: True
 ---
 
-Page that displays random quotes.
+Page that displays random quotes by calling an api.
