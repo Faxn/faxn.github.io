@@ -1,4 +1,5 @@
 ---
+live: https://codepen.io/faxn/full/pwzPyQ/
 source: https://codepen.io/faxn/pen/pwzPyQ
 for: https://www.freecodecamp.com/challenges/build-a-random-quote-machine
 image: assets/Quotes.png

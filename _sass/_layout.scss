@@ -23,28 +23,45 @@
   border-radius: 1em;
 }
 
+/**
+ * Project Captions
+ */
 .project-tile:hover figcaption{
   visibility: visible;
 }
 
 figure {
-  padding: 1em;
+    padding: 1em;
 }
 
 .project-tile figcaption {
-  display: flex;
-  flex-direction:   column;
-  justify-content: space-between;
-  position: absolute;
-  top: 0;
-  margin: 1.5em;
-  visibility: hidden;
-  
+    //border: 1px solid red;
+    display: flex;
+    flex-direction:   column;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin: 5%;
+    visibility: hidden;
+    color: #ffffff;
 }
 
-.project-tile figcaption *{
-  background-color: blueviolet;
-  padding: 0.5em;
-  align-self: center;
-  border-radius: 1em;
+.project-tile figcaption > *{
+    background-color: transparentize($brand-info, 0.3);
+    padding: 0.5rem;
+    margin-top: 0px;
+    align-self: center;
+    border-radius: 0.5rem;
 }
+
+.project-tile figcaption > .project-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px;
+    width: 100%;
+}
+
+/**/

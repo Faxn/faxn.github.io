@@ -6,4 +6,4 @@ image: assets/ISAL.png
 show: False
 ---
 
-I built this project for some reason. I should probably update it's Description.
+Api that returns search results from a different search API in JSON. Mostly an exercise in api use.

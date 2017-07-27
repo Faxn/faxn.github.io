@@ -1,7 +1,7 @@
 ---
 source: https://github.com/Faxn/Amanuensis
 image: assets/Amanuensis.png
-show: True
+show: False
 ---
 
 Web application to handle character sheets for tabletop RPG games. Very much a 

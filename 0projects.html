@@ -4,7 +4,7 @@ title: Projects
 portfolio_order: 15
 ---
 
-<div class="container-fluid row">
+<div class="container row">
 {% for my_project in site.projects %}
   <div class='project-tile'>
     <figure class='col-xs-12 col-sm-6 col-md-4'>
@@ -12,9 +12,9 @@ portfolio_order: 15
       <figcaption>
           <h3>{{my_project.title}}</h3>
           {{my_project.content}}
-          <span>
-            <a href={{my_project.live}}>page</a>
-            <a href={{my_project.source}}>source</a>
+          <span class="project-links">
+            <a href="{{my_project.live}}" class="btn btn-primary">page</a>
+            <a href="{{my_project.source}}" class="btn btn-primary">source</a>
           </span>
       </figcaption>
     </figure>
