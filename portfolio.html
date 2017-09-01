@@ -1,5 +1,5 @@
 ---
-title: portfolio
+title: Blake Curry
 ---
 
 <!DOCTYPE html>
@@ -28,9 +28,9 @@ title: portfolio
     
 
     <div class="site-content well">
-      {% for my_page in portfolio_pages %}         
+      {% for my_page in portfolio_pages %}
         <section id="{{my_page.title}}" class="post">
-          <a href="{{my_page.url | prepend: site.baseurl}}"><h2 class="post-header">{{my_page.title}}</h2></a>
+          <h2 class="post-header">{{my_page.title}}</h2>
           <div class="post-content">
             {{my_page.content}}
           </div>

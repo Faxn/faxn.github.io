@@ -24,18 +24,6 @@ permalink: /:categories/:title:output_ext
 #Google analytics tracking id
 ga_id: UA-97202752-1
 
-social_links:
--
-    name: Github
-    icon: //github.com/favicon.ico # TODO Self-host social media icons insted of hotlinking
-    #icon: static/icon-github.svg
-    url: //www.github.com/faxn
--
-    name: Linkedin
-    icon: https://www.linkedin.com/favicon.ico
-    url: https://www.linkedin.com/in/blake-curry-27163331
-
-
 favicon: https://avatars3.githubusercontent.com/u/3074727?v=3
 usecdn: true
 
