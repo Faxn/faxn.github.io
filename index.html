@@ -1,41 +1,53 @@
 ---
 title: Blake Curry
-layout: default
+layout: none
 ---
 
+<!DOCTYPE html>
+<html>
 
-{% assign portfolio_pages = site.pages | where_exp:"item","item contains 'portfolio_order'" | sort:"portfolio_order" %}
-
-<header class="site-header bg-primary navbar-fixed-top">
-	<h2>{{ page.title }}</h2>
-	<nav>
-	  <ul class="nav nav-pills">
-		{% for my_page in portfolio_pages %}
-			{% if my_page.title %}
-				<li><a class="page-link btn btn-link" href="#{{ my_page.title }}">{{ my_page.title }}</a></li>
-			{% endif %}
-		{% endfor %}
-	  </ul>
-	</nav>
-	
-</header>
+  {% include head.html %}
 
 
-<div class="site-content well">
-  {% for my_page in portfolio_pages %}         
-	<section id="{{my_page.title}}" class="post">
-	  <a href="{{my_page.url | prepend: site.baseurl}}"><h2 class="post-header">{{my_page.title}}</h2></a>
-	  <div class="post-content">
-		{{my_page.content}}
-	  </div>
-	</section>
-  {% endfor %}
-  
-</div>
+  <body data-spy="scroll" data-target=".navbar-fixed-top">
+    
+    {% assign portfolio_pages = site.pages | where_exp:"item","item.portfolio_order" | sort:"portfolio_order" %}
 
-<!-- <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p> -->
+    <header class="site-header bg-primary navbar-fixed-top">
+        <h2>{{ page.title }}</h2>
+        <nav>
+          <ul class="nav nav-pills">
+            {% for my_page in portfolio_pages %}
+                {% if my_page.title %}
+                    <li class="page-scroll"><a class="page-link btn btn-link" href="#{{ my_page.title }}">{{ my_page.title }}</a></li>
+                {% endif %}
+            {% endfor %}
+          </ul>
+        </nav>
+        
+    </header>
+    
 
+    <div class="site-content well" >
+      {% for my_page in portfolio_pages %}
+        <section id="{{my_page.title}}" class="post">
+          <h2 class="post-header">{{my_page.title}}</h2>
+          <div class="post-content">
+            {{my_page.content}}
+          </div>
+        </section>
+      {% endfor %}
+      
+    </div>
 
+    <!-- <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p> -->
+    <footer class="site-footer">
+		{% include footer.html %}
+	</footer>
+
+  </body>
+
+</html>
 
 
 

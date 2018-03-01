@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Experience/Education
+title: Experience
 portfolio_order: 30
 ---
 

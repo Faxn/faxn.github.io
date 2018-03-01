@@ -14,8 +14,31 @@
   margin: 1px;
 }
 
+.nav .active {
+    border: 1px solid $brand-info;
+}
+
 .site-content {
   padding-top: 80px;
+}
+
+section::before{
+    display: block; 
+ 	content: " "; 
+  	height: 80px;      
+    margin-top: -80px;
+    visibility: hidden; 
+}
+
+@media(min-width 900px) {
+    .site-content.well {
+        width: 90%;
+    }
+}
+
+.body {
+    // for scroll spy.
+    position: relative;
 }
 
 .project-screenshot {
@@ -71,6 +94,7 @@ figure {
     flex-direction: row;
     justify-content: space-between;
     padding-bottom: 1.5rem;
+    align-items: flex-end;
 }
 
 .contact-list {
