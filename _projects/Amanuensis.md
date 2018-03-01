@@ -2,6 +2,7 @@
 source: https://github.com/Faxn/Amanuensis
 image: assets/Amanuensis.png
 show: False
+published: False
 ---
 
 Web application to handle character sheets for tabletop RPG games. Very much a 

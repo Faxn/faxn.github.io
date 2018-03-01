@@ -1,3 +1,6 @@
+---
+published: False
+---
 ### Markdown
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
@@ -30,6 +33,10 @@ Your Pages site will use the layout and styles from the Jekyll theme you have se
 
 Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
 
+### note
+requires jekyll >3.2.0 As of Febuary 2018 ubuntu still has 2.x
+consider styles:
+https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md
 
 ### REQUIREMENTS
 User Story: I can access all of the portfolio webpage's content just by scrolling.

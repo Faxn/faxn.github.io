@@ -64,4 +64,19 @@ figure {
     width: 100%;
 }
 
+
+
+.site-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 1.5rem;
+}
+
+.contact-list {
+    display: flex;
+    float: right;
+    margin: 10px
+}
+
 /**/

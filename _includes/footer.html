@@ -1,22 +1,29 @@
+<div class="">
+	<p>{{ site.description }}</p>
+	{% assign builtwith = site.pages | where:"title", "builtwith" %}
+	{{ builtwith[0].content }}
+</div>
 
 <div class="contact-list">
-    
-  <a class='btn btn-info contact-link' href="mailto:{{ site.email }}">
-      <span class='glyphicon glyphicon-envelope icon'></span>
-      {{ site.email }}
-  </a>
-  {% for link in site.social_links %}
-  <a class='btn btn-info contact-link' href="{{link.url}}">
-    <img class="icon" src="{{link.icon}}"> {{link.name}}
-  </a>
-  {% endfor %}
-  
+	<!--
+	<a class='btn btn-info contact-link' href="mailto:{{ site.email }}">
+	  <span class='glyphicon glyphicon-envelope icon'></span>
+	  {{ site.email }}
+	</a>
+	-->
+
+	{% for link in site.social_links %}
+		<a class='btn btn-info contact-link' href="{{link.url}}">
+	{% if link.fa-icon %}
+		<i title="{{link.name}}" class="fa fa-2x {{link.fa-icon}}"></i>
+	{% else %}
+		<img title="{{link.name}}" alt="{{link.name}}" class="icon" src="{{link.icon}}">
+	{% endif %}
+		</a>
+	{% endfor %}
 </div>
 
 
-<div class="footer-col footer-col-3">
-    <p>{{ site.description }}</p>
-</div>
 
-  
+
 

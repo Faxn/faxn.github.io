@@ -6,7 +6,6 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-
 title: Blake Curry
 email: blake.curry@gmx.us
 description: > # this means to ignore newlines until "baseurl:"
@@ -38,3 +37,24 @@ defaults:
     values:
       layout: project
       permalink: /:collection/:name:output_ext
+ 
+social_links:
+-
+    name: Email
+    fa-icon: fa-envelope
+    url: mailto:blake.curry@gmx.us
+-
+    name: Github
+    icon: //github.com/favicon.ico # TODO Self-host social media icons insted of hotlinking
+    #icon: static/icon-github.svg
+    fa-icon: fa-github
+    url: //www.github.com/faxn
+-
+    name: Linkedin
+    fa-icon: fa-linkedin
+    icon: https://www.linkedin.com/favicon.ico
+    url: https://www.linkedin.com/in/blake-curry-27163331
+-
+    name: freeCodeCamp
+    fa-icon: fa-free-code-camp
+    url: https://www.freecodecamp.org/faxn
