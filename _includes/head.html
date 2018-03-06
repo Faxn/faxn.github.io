@@ -1,12 +1,14 @@
 <head>
   <!-- Google Analytics -->
   {% if site.ga_id %}
+		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-97202752-1"></script>
 		<script>
 		  window.dataLayer = window.dataLayer || [];
 		  function gtag(){dataLayer.push(arguments);}
 		  gtag('js', new Date());
-		  gtag('config', '{{site.ga_id}}');
+
+		  gtag('config', 'UA-97202752-1');
 		</script>
   {% endif %}
   
