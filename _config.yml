@@ -29,6 +29,9 @@ usecdn: true
 collections:
     projects:
         output: true
+    ddep:
+        output: true
+        permalink: /:collection/:name:output_ext
 
 defaults:
   - scope:
@@ -37,7 +40,12 @@ defaults:
     values:
       layout: project
       permalink: /:collection/:name:output_ext
- 
+  - scope:
+      path: ""
+      type: "ddep"
+    values:
+      layout: post
+
 social_links:
 -
     name: Email
