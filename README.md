@@ -33,13 +33,9 @@ Your Pages site will use the layout and styles from the Jekyll theme you have se
 
 Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
 
-### note
+### Note
 requires jekyll >3.2.0 As of Febuary 2018 ubuntu still has 2.x
-consider styles:
-https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md
 
-### REQUIREMENTS
-User Story: I can access all of the portfolio webpage's content just by scrolling.
-User Story: I can click different buttons that will take me to the portfolio creator's different social media pages.
-User Story: I can see thumbnail images of different projects the portfolio creator has built (if you haven't built any websites before, use placeholders.)
-User Story: I navigate to different sections of the webpage by clicking buttons in the navigation.
+consider styles:
+http://getbem.com/naming/
+
