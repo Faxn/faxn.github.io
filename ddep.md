@@ -25,6 +25,11 @@ permalink: /ddep/index.html
 ## Design
 
 1. Projects are limited in duration to 1 day. If there is work to be done after that then it becomes a new project.
+3. Projects aren't to be edited after the end of the day they are started. Make a new Project with a revised goal.
+4. Projects should take between 3-6 hours of effort. 
+5. project deliverables live in /ddep/<serial>
+6. a description file for the project is at /_ddep/<serial>.md
+7. The project's result should run from opening the deliverable folder in a browser. 
 2. Projects will be evaluated at the end of the day, and given one of the following statuses: 
 
 **SUCCESS**: The project's goals were met and the deliverable does what was intended.
@@ -33,11 +38,7 @@ permalink: /ddep/index.html
 
 **INCOMPLETE**: The project is scheduled to be worked on in the future. (project 0 will have a status of incomplete because it's to be used as a template.)
 
-3. Projects aren't to be edited after the end of the day they are started. Make a new Project with a revised goal.
-4. Projects should take between 3-6 hours of effort. 
 
-project deliverables live in /ddep/<serial>
-a description file for the project is at /_ddep/<serial>.md
 
 ## Listing
 
