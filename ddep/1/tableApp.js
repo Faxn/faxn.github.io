@@ -1,5 +1,7 @@
 /** Random Tables */
 const PurposeTable = ["Kitchen", "Barracks", "Armory"];
+const ConditionTable = ["The ceiling is collapsed.", "Most of the Room was destroyed in a fire.", ];
+const ContentsTable = ["a monster", "a trap", "a treasure", "a monster and a treasure", "a trap and a treasure", "a dead adventurer and a trap"];
 
 /** Components */
 
@@ -23,25 +25,33 @@ class TableRoll extends React.Component{
 
 
 class TableApp extends React.Component {
+
     constructor(){
         super();
-        this.state = {roll: Math.random()};
+        this.state= {rolls: [0, 0, 0]};
+    }
+    
+    componentDidMount(){
+        this.roll();
     }
     
     roll(){
+        let rolls = [];
+        for (let i =0; i< 10; i++){
+            rolls.push(Math.random());
+        }
         //Component.prototype.setState takes an updater not a new state.
-        let r = Math.random();
-        console.log(r)
-        console.log(this)
-        this.setState({roll: r});
+        this.setState({rolls: rolls});
     }
-    
+        
     render() {
         console.log('render')
         console.log(this.state)
         return (<div>
             <button onClick = {() => this.roll()}>Roll!</button>
-            <p>Here we have a <TableRoll roll={this.state.roll} table={PurposeTable}/>.</p>
+            <p>Here we have a <TableRoll roll={this.state.rolls[0]} table={PurposeTable}/>.&nbsp;
+            <TableRoll roll={this.state.rolls[1]} table={ConditionTable}/>&nbsp;
+            There is <TableRoll table={ContentsTable} roll={this.state.rolls[2]}/> in the room. </p>
         </div>);
     }
 }
