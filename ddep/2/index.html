@@ -46,6 +46,17 @@ class Movable extends React.Component {
         //needed to make the preview of the element show when dragged.
         event.dataTransfer.setData('text/plain', null)
     }
+    componentDidUpdate(){
+        localStorage.setItem("Movable"+this.props.mkey, JSON.stringify(this.state))
+    }
+    componentDidMount(){
+        try{
+            let storedState = localStorage.getItem("Movable"+this.props.mkey)
+            storedState = JSON.parse(storedState);
+            this.setState(storedState);
+        } catch (e) {
+        }
+    }
 }
 
 
@@ -56,10 +67,10 @@ class MovableDemo extends React.Component{
         onDragOver={(event) => this.movableDragOver(event)}
         onDrop={(event) => this.movableDrop(event)} 
         style={this.getStyle()}>
-            <Movable>Iron</Movable>
-            <Movable>Copper</Movable>
-            <Movable>Coal</Movable>
-            <Movable>Stone</Movable>
+            <Movable mkey='1'>Iron</Movable>
+            <Movable mkey='2'>Copper</Movable>
+            <Movable mkey='3'>Coal</Movable>
+            <Movable mkey='4'>Stone</Movable>
         </div>
     )}
     
@@ -101,4 +112,5 @@ ReactDOM.render(<MovableDemo rows='5' columns='5'/>, document.getElementById('âš
 
 </script>
 </body>
-<!-- https://gist.github.com/kentcdodds/5274dfa1eb31e6d22b9eddd1efc773dc -->
+<!-- Code: https://faxn.github.io -->
+<!-- Template: https://gist.github.com/kentcdodds/5274dfa1eb31e6d22b9eddd1efc773dc -->
