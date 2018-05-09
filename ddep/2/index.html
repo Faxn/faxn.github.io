@@ -1,0 +1,99 @@
+<body>
+<div id="⚛️"></div>
+<script src="https://unpkg.com/react@16.0.0/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@16.0.0/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+<style>
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 1em;
+        border: 1px solid pink;
+    }
+    .movable {
+        border: 3px solid teal;
+        margin: 5px;
+    }
+</style>
+<script type="text/babel">
+
+var dragged;
+//TODO: make the container care about these.
+const ROWS = 3;
+const COLUMNS = 3;
+
+class Movable extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            row: -1,
+            col: -1,
+        }
+    }
+    render(){ return(
+        <div className='movable' draggable='true' onDragStart={(event) => this.dragStart(event)} style={this.getStyle()}>
+            {this.props.children}
+        </div>
+    )}
+    getStyle(){
+        let style = {};
+        if (this.state.row > 0){
+            style['gridRowStart'] = this.state.row
+        }
+        if (this.state.col > 0 ){
+            style['gridColumnStart'] = this.state.col
+        }
+        return style;
+    }
+    dragStart(event) {
+        dragged = this;
+        //needed to make the preview of the element show when dragged.
+        event.dataTransfer.setData('text/plain', null)
+    }
+}
+
+
+
+class MovableDemo extends React.Component{ 
+    render(props){ return (
+        <div className='container' onDragOver={(event) => this.movableDragOver(event)} onDrop={(event) => this.movableDrop(event)} >
+            <Movable>Iron</Movable>
+            <Movable>Copper</Movable>
+            <Movable>Coal</Movable>
+            <Movable>Stone</Movable>
+        </div>
+    )}
+    
+    movableDragOver(event){
+        if( dragged instanceof Movable) {
+            event.preventDefault();
+        }
+    }
+
+    movableDrop(event) {
+        if( dragged instanceof Movable) {
+            event.preventDefault();
+            /*
+            console.log("Dropped");
+            //keep the event from being reused so we can examine it in console.
+            event.persist();
+            console.log(event);
+            /**/
+            
+            let gridRect = event.target.getBoundingClientRect();
+            let gridX = event.pageX - gridRect.x;
+            let gridY = event.pageY - gridRect.y;
+            let col = Math.floor(gridX/ (gridRect.width/COLUMNS) + 1);
+            let row = Math.floor(gridY/ (gridRect.height/ROWS) + 1 );
+            dragged.setState({col: col, row: row});
+            console.log(`Moved to ${row}, ${col}`);
+        }
+    }
+}
+
+ReactDOM.render(<MovableDemo/>, document.getElementById('⚛️'))
+
+</script>
+</body>
+<!-- https://gist.github.com/kentcdodds/5274dfa1eb31e6d22b9eddd1efc773dc -->
