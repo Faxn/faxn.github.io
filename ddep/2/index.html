@@ -6,8 +6,6 @@
 <style>
     .container {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3, 1fr);
         gap: 1em;
         border: 1px solid pink;
     }
@@ -19,9 +17,6 @@
 <script type="text/babel">
 
 var dragged;
-//TODO: make the container care about these.
-const ROWS = 3;
-const COLUMNS = 3;
 
 class Movable extends React.Component {
     constructor(props) {
@@ -57,7 +52,10 @@ class Movable extends React.Component {
 
 class MovableDemo extends React.Component{ 
     render(props){ return (
-        <div className='container' onDragOver={(event) => this.movableDragOver(event)} onDrop={(event) => this.movableDrop(event)} >
+        <div className='container' 
+        onDragOver={(event) => this.movableDragOver(event)}
+        onDrop={(event) => this.movableDrop(event)} 
+        style={this.getStyle()}>
             <Movable>Iron</Movable>
             <Movable>Copper</Movable>
             <Movable>Coal</Movable>
@@ -84,15 +82,22 @@ class MovableDemo extends React.Component{
             let gridRect = event.target.getBoundingClientRect();
             let gridX = event.pageX - gridRect.x;
             let gridY = event.pageY - gridRect.y;
-            let col = Math.floor(gridX/ (gridRect.width/COLUMNS) + 1);
-            let row = Math.floor(gridY/ (gridRect.height/ROWS) + 1 );
+            let col = Math.floor(gridX/ (gridRect.width/this.props.columns) + 1);
+            let row = Math.floor(gridY/ (gridRect.height/this.props.rows) + 1 );
             dragged.setState({col: col, row: row});
             console.log(`Moved to ${row}, ${col}`);
         }
     }
+    
+    getStyle() {
+        return {
+            gridTemplateColumns: `repeat(${this.props.columns}, 1fr)`,
+            gridTemplateRows: `repeat(${this.props.rows}, 1fr)`,
+        }
+    }
 }
 
-ReactDOM.render(<MovableDemo/>, document.getElementById('⚛️'))
+ReactDOM.render(<MovableDemo rows='5' columns='5'/>, document.getElementById('⚛️'))
 
 </script>
 </body>
